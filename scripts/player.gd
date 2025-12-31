@@ -14,7 +14,7 @@ const BOB_AMP = 0.08
 var t_bob = 0.0
 
 func _ready() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	# Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 	if Engine.is_editor_hint():
 		return

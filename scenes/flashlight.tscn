@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://caoylk761hqyb"]
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_gm4ho"]
+radius = 0.03
+radial_steps = 7
+sections = 3
+section_length = 0.05
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_lkaa1"]
+radius = 0.05
+sections = 2
+section_length = 0.02
+section_rings = 1
+
+[node name="Flashlight" type="Node3D"]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("TubeTrailMesh_gm4ho")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -0.09204895, 0, 0)
+mesh = SubResource("TubeTrailMesh_lkaa1")

@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjc7gst21oo3o"]
+[gd_scene load_steps=5 format=3 uid="uid://cjc7gst21oo3o"]
 
 [ext_resource type="Script" uid="uid://dgevveicb2qwv" path="res://scripts/player.gd" id="1_dufin"]
+[ext_resource type="PackedScene" uid="uid://caoylk761hqyb" path="res://scenes/flashlight.tscn" id="2_o7tup"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6cgf6"]
 radius = 0.2
@@ -13,24 +14,24 @@ points = PackedVector3Array(-0.21344979, 0.7014076, 0.08329635, 0.08329635, 0.70
 script = ExtResource("1_dufin")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+cast_shadow = 0
 mesh = SubResource("CapsuleMesh_6cgf6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("ConvexPolygonShape3D_cvunv")
 
 [node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3114162, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Node3D"]
 
-[node name="Node3D" type="Node3D" parent="Node3D/Camera3D"]
+[node name="Flashlight" parent="Node3D/Camera3D" instance=ExtResource("2_o7tup")]
+transform = Transform3D(-4.3711392e-08, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, -4.3711392e-08, 0.117179155, -0.15285331, -0.28065744)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Node3D/Camera3D/Node3D"]
-light_color = Color(0.744921, 0.8666699, 0.9601155, 1)
-light_energy = 4.33
-light_indirect_energy = 1.095
-light_volumetric_fog_energy = 0.1
-light_size = 0.22
-light_specular = 0.0
-spot_range = 10.0
-spot_angle = 39.43
+[node name="SpotLight3D" type="SpotLight3D" parent="Node3D/Camera3D/Flashlight"]
+transform = Transform3D(-4.3711356e-08, -0.04871035, 0.99881285, 0, 0.998813, 0.048710357, -0.9999999, 2.129196e-09, -4.365947e-08, -0.086342424, -0.0035422742, 0)
+light_color = Color(0.96117514, 0.93456006, 0.7355992, 1)
+light_energy = 5.0
+light_indirect_energy = 0.0
+spot_range = 15.0
 spot_angle_attenuation = 3.0
