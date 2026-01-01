@@ -1,20 +1,19 @@
 extends CharacterBody3D
 
-@onready var head: Node3D = $Node3D
-@onready var camera: Camera3D = $Node3D/Camera3D
+@onready var head: Node3D = $Head
+@onready var camera: Camera3D = $Head/Camera3D
 
 @export var dungeon_generator: Node
 
-const SPEED = 4.0
-const JUMP_VELOCITY = 4.5
-const SENSITIVITY = 0.003
+const SPEED = 3.5
+const SENSITIVITY = 0.002
 
 const BOB_FREQ = 2.0
-const BOB_AMP = 0.08
+const BOB_AMP = 0.1
 var t_bob = 0.0
 
 func _ready() -> void:
-	# Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 	if Engine.is_editor_hint():
 		return
@@ -35,16 +34,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-40), deg_to_rad(60))
 
 func _physics_process(delta: float) -> void:
-	var current_time = Time.get_ticks_msec() / 1000.0
-	
-	if current_time < 2.0:
-		velocity.y = 0 
-	else:
-		if not is_on_floor():
+	if not is_on_floor():
 			velocity += get_gravity() * delta
-		
-		if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-			velocity.y = JUMP_VELOCITY
+	
 
 	var input_dir := Input.get_vector("walk_left", "walk_right", "walk_forward", "walk_backward")
 	var direction := (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()

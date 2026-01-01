@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cna5a7p2qndys"
+path="res://.godot/imported/Linterna.obj-3d0e5266ea0a28f5df02060202770e8e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Linterna.obj-3d0e5266ea0a28f5df02060202770e8e.mesh"]
+
+source_file="res://assets/Linterna.obj"
+dest_files=["res://.godot/imported/Linterna.obj-3d0e5266ea0a28f5df02060202770e8e.mesh", "res://.godot/imported/Linterna.obj-3d0e5266ea0a28f5df02060202770e8e.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
