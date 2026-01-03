@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cycjln0syl14y"
-path="res://.godot/imported/FlashlightTexture.jpg-343bd04a29cfd89452f2d4a3b48f1570.ctex"
+uid="uid://c6pv08auohuuh"
+path="res://.godot/imported/Horror_Stone_06-128x128.png-318e1c361e70c9a586f1f35b387bea28.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/FlashlightTexture.jpg"
-dest_files=["res://.godot/imported/FlashlightTexture.jpg-343bd04a29cfd89452f2d4a3b48f1570.ctex"]
+source_file="res://assets/textures/Horror_Stone_06-128x128.png"
+dest_files=["res://.godot/imported/Horror_Stone_06-128x128.png-318e1c361e70c9a586f1f35b387bea28.ctex"]
 
 [params]
 

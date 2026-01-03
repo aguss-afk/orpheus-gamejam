@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doeqglvn5ktrg"
-path="res://.godot/imported/Horror_Floor_01-128x128.png-e73039ab19ae7824c04a1883da19f998.ctex"
+uid="uid://b1h8ylvlih5e"
+path="res://.godot/imported/Horror_Floor_12-128x128.png-5637b90420817650536b275bec2aac2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Horror_Floor_01-128x128.png"
-dest_files=["res://.godot/imported/Horror_Floor_01-128x128.png-e73039ab19ae7824c04a1883da19f998.ctex"]
+source_file="res://assets/textures/Horror_Floor_12-128x128.png"
+dest_files=["res://.godot/imported/Horror_Floor_12-128x128.png-5637b90420817650536b275bec2aac2e.ctex"]
 
 [params]
 

@@ -2,6 +2,7 @@
 extends Node3D
 
 @onready var grid_map : GridMap = $GridMap
+@onready var loading_screen: CanvasLayer = $LoadingScreen
 
 signal dungeon_generated
 signal spawn_point_ready(spawn_position: Vector3)
@@ -31,7 +32,10 @@ var room_positions : PackedVector3Array = []
 var _generated : bool = false
 
 func _ready():
+	loading_screen.visible = true
 	await generate()
+	await get_tree().create_timer(1).timeout
+	loading_screen.visible = false
 
 func visualize_border():
 	grid_map.clear()

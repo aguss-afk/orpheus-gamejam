@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dijecy3cvudyt"
-path="res://.godot/imported/Horror_Stone_12-128x128.png-61d3ff08b2245882cc979198cf6a7cbf.ctex"
+uid="uid://bqqj0jwnvh6wl"
+path="res://.godot/imported/Horror_Wall_07-128x128.png-0e9a735c31a21ab1a13185e1fd53abf2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Horror_Stone_12-128x128.png"
-dest_files=["res://.godot/imported/Horror_Stone_12-128x128.png-61d3ff08b2245882cc979198cf6a7cbf.ctex"]
+source_file="res://assets/textures/Horror_Wall_07-128x128.png"
+dest_files=["res://.godot/imported/Horror_Wall_07-128x128.png-0e9a735c31a21ab1a13185e1fd53abf2.ctex"]
 
 [params]
 

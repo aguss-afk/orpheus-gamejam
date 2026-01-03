@@ -5,11 +5,11 @@ extends CharacterBody3D
 
 @export var dungeon_generator: Node
 
-const SPEED = 3.5
+var SPEED = 3.5
 const SENSITIVITY = 0.002
-
-const BOB_FREQ = 2.0
-const BOB_AMP = 0.1
+var running = false
+var BOB_FREQ = 2.0
+var BOB_AMP = 0.1
 var t_bob = 0.0
 
 func _ready() -> void:
@@ -34,12 +34,23 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-40), deg_to_rad(60))
 
 func _physics_process(delta: float) -> void:
+	
 	if not is_on_floor():
 			velocity += get_gravity() * delta
 	
 
 	var input_dir := Input.get_vector("walk_left", "walk_right", "walk_forward", "walk_backward")
 	var direction := (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	if Input.is_action_just_pressed("run"):
+		running = !running
+	if running:
+		SPEED = 6
+		BOB_AMP = 0.1
+		BOB_FREQ = 2
+	else:
+		SPEED = 3.5
+		BOB_FREQ = 1.5
+		BOB_AMP = 0.1
 	if is_on_floor():
 		if direction:
 			velocity.x = direction.x * SPEED

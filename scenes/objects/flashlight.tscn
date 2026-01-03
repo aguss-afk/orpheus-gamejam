@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://caoylk761hqyb"]
 
-[ext_resource type="Script" uid="uid://wtrw5gs5ed76" path="res://scripts/pick_up_flashlight.gd" id="1_bis5n"]
+[ext_resource type="Script" uid="uid://wtrw5gs5ed76" path="res://scripts/flashlight.gd" id="1_bis5n"]
 [ext_resource type="Material" uid="uid://b03qqtg4q0u0y" path="res://materials/flashlight.tres" id="1_lkaa1"]
 [ext_resource type="Material" uid="uid://dfn0j2l3g2sq3" path="res://materials/flashlight_top.tres" id="2_0ywi5"]
 

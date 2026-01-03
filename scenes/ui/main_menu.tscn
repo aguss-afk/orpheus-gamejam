@@ -1,0 +1,125 @@
+[gd_scene load_steps=8 format=3 uid="uid://bwsqb0f2iovnc"]
+
+[ext_resource type="Script" uid="uid://dl3go6t38uemk" path="res://scripts/main_menu.gd" id="1_1g8jr"]
+[ext_resource type="FontFile" uid="uid://c7htx2nbo6exb" path="res://assets/fonts/HelpMe.ttf" id="1_sl1te"]
+[ext_resource type="Texture2D" uid="uid://5bhsk7ro5gqu" path="res://assets/Screenshot 2026-01-03 185109.png" id="2_m1kxf"]
+[ext_resource type="FontFile" uid="uid://ddjcbstpx5y6v" path="res://assets/fonts/OldEnglishGothicPixelRegular-ow2Bo.ttf" id="3_x2yvf"]
+[ext_resource type="AudioStream" uid="uid://djvvribdrrsvl" path="res://assets/audio/background.mp3" id="4_m1kxf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x2yvf"]
+texture = ExtResource("2_m1kxf")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_87aya"]
+draw_center = false
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.1584723, 0.15847233, 0.1584723, 0.6)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1g8jr")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_x2yvf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.0
+offset_top = -19.0
+offset_right = 38.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 7
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.51739156, 0.061436333, 0.26268467, 1)
+theme_override_colors/font_hover_color = Color(0.5176471, 0.0627451, 0.2627451, 1)
+theme_override_fonts/font = ExtResource("3_x2yvf")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_87aya")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_87aya")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_87aya")
+theme_override_styles/hover = SubResource("StyleBoxFlat_87aya")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_87aya")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_87aya")
+text = "Start"
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.51739156, 0.061436333, 0.26268467, 1)
+theme_override_colors/font_hover_color = Color(0.5176471, 0.0627451, 0.2627451, 1)
+theme_override_fonts/font = ExtResource("3_x2yvf")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_87aya")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_87aya")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_87aya")
+theme_override_styles/hover = SubResource("StyleBoxFlat_87aya")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_87aya")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_87aya")
+text = "Options"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+texture_repeat = 1
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.51739156, 0.061436333, 0.26268467, 1)
+theme_override_colors/font_hover_color = Color(0.5176471, 0.0627451, 0.2627451, 1)
+theme_override_fonts/font = ExtResource("3_x2yvf")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_87aya")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_87aya")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_87aya")
+theme_override_styles/hover = SubResource("StyleBoxFlat_87aya")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_87aya")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_87aya")
+text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.0
+offset_top = -71.0
+offset_right = 54.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_sl1te")
+theme_override_font_sizes/font_size = 23
+text = "ORPHEUS"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_m1kxf")
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

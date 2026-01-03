@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dgevveicb2qwv" path="res://scripts/player.gd" id="1_dufin"]
 [ext_resource type="Script" uid="uid://d3ynetfor1kru" path="res://scripts/raycast.gd" id="3_cthcg"]
-[ext_resource type="Script" uid="uid://co75uybjx0vbb" path="res://scripts/spot_light_3d.gd" id="3_nr340"]
+[ext_resource type="Script" uid="uid://co75uybjx0vbb" path="res://scripts/spotlight.gd" id="3_nr340"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6cgf6"]
 radius = 0.2

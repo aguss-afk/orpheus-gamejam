@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bkvc4w003gdxm"]
 
-[ext_resource type="Texture2D" uid="uid://bqqj0jwnvh6wl" path="res://assets/Horror_Wall_07-128x128.png" id="1_lcv6a"]
+[ext_resource type="Texture2D" uid="uid://bqqj0jwnvh6wl" path="res://assets/textures/Horror_Wall_07-128x128.png" id="1_lcv6a"]
 
 [resource]
 albedo_texture = ExtResource("1_lcv6a")

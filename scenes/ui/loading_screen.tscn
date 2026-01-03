@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cybkuiurauapx"]
+
+[node name="LoadingScreen" type="CanvasLayer"]
+layer = 100
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.17252132, 0.06345855, 0.13028526, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_top = 29.0
+offset_right = 57.5
+offset_bottom = 52.0
+grow_horizontal = 2
+text = "Loading level..."
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -77.5
+offset_top = -25.0
+offset_right = 77.5
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+text = "Press [Shift] to run"
+
+[node name="Label3" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+text = "Press [E] to interact "
