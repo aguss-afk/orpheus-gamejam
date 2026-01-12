@@ -24,6 +24,10 @@ window/size/borderless=true
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
 
+[global_group]
+
+arboles=""
+
 [importer_defaults]
 
 texture={

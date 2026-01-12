@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://sfjpruuqgqvn"]
+
+[ext_resource type="ArrayMesh" uid="uid://d4b7ip2msokhq" path="res://assets/modelos/Mesh_Teddy.res" id="1_k8m7s"]
+[ext_resource type="Script" uid="uid://yr87365kw0rw" path="res://scripts/juguete.gd" id="1_nc4lr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nc4lr"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="StaticBody3D" type="StaticBody3D" groups=["interactuable"]]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_nc4lr")
+
+[node name="MeshTeddy" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0026718378, 1.4901161e-08, -0.007701874)
+mesh = ExtResource("1_k8m7s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0011277124, 0.18438739, 0)
+shape = SubResource("BoxShape3D_nc4lr")

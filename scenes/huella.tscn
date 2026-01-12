@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://luedqg8xykn1"]
+
+[ext_resource type="Script" uid="uid://bdnst4stwqdlp" path="res://scripts/huella.gd" id="1_uykws"]
+[ext_resource type="Texture2D" uid="uid://bsnrq4yjwpaf4" path="res://assets/textures/huellas.png" id="2_yrkob"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_uykws"]
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yrkob"]
+transparency = 1
+albedo_color = Color(0.5803922, 0.039215688, 0.19215687, 1)
+albedo_texture = ExtResource("2_yrkob")
+emission_enabled = true
+emission_energy_multiplier = 0.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_demkd"]
+size = Vector3(0.5, 0.1, 0.5)
+
+[node name="Huella" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_uykws")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_uykws")
+surface_material_override/0 = SubResource("StandardMaterial3D_yrkob")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_demkd")

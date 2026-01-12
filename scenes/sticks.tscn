@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://jgnful2txrkq"]
+
+[ext_resource type="ArrayMesh" uid="uid://dh67pwexi4bng" path="res://assets/modelos/Sticks/stick_2.res" id="1_ak3pk"]
+[ext_resource type="ArrayMesh" uid="uid://pawnimssf2b4" path="res://assets/modelos/Sticks/stick_3.res" id="2_btayf"]
+[ext_resource type="ArrayMesh" uid="uid://cyjwdwhm05bmh" path="res://assets/modelos/Sticks/stick_4.res" id="3_n72mp"]
+[ext_resource type="ArrayMesh" uid="uid://ofh8h5tpt5hw" path="res://assets/modelos/Sticks/stick_5.res" id="4_0bp0j"]
+[ext_resource type="ArrayMesh" uid="uid://0ef0pkcsqgh1" path="res://assets/modelos/Sticks/stick_1.res" id="5_3u60a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qrjd8"]
+size = Vector3(0.6, 0.3, 0.6)
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_qrjd8")
+
+[node name="Stick2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.17364801, -0.9848078, 7.590394e-09, -4.371139e-08, 1.9106855e-15, -1, 0.9848078, -0.17364801, -4.3047315e-08, 0, 0, 0)
+mesh = ExtResource("1_ak3pk")
+
+[node name="Stick3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.9499721, 0.3123348, -4.15246e-08, -4.371139e-08, 1.9106855e-15, -1, -0.3123348, 0.9499721, 1.3652589e-08, 0, 0, 0.1)
+mesh = ExtResource("2_btayf")
+
+[node name="Stick4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.39874905, -0.9170601, -1.7429876e-08, -4.371139e-08, 1.9106855e-15, -1, 0.9170601, 0.39874905, -4.008597e-08, 0, 0, -0.1)
+mesh = ExtResource("3_n72mp")
+
+[node name="Stick5" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.41786695, 0.90850824, 1.8265546e-08, -4.371139e-08, 1.9106855e-15, -1, -0.90850824, -0.41786695, 3.9712155e-08, -0.1, 0, 0.1)
+mesh = ExtResource("4_0bp0j")
+
+[node name="Stick1" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.81915206, 0.57357645, -2.5071824e-08, 0, -4.371139e-08, -1, -0.57357645, -0.81915206, 3.5806274e-08, 0, 0, 0)
+mesh = ExtResource("5_3u60a")

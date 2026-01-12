@@ -1,6 +1,9 @@
-res://scenes/ui
-res://scripts
 res://scenes
+res://assets/modelos/puerta
+res://assets/modelos/Sticks
+res://assets/modelos
+res://scripts
+res://scenes/ui
 res://materials
 res://Materials
 res://shaders

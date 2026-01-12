@@ -11,7 +11,7 @@ height = 1.7
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cvunv"]
 points = PackedVector3Array(-0.21344979, 0.7014076, 0.08329635, 0.08329635, 0.7014076, -0.21344979, 0.16421175, -0.7014076, 0.16421175, 0.16421175, -0.72828084, -0.15944985, -0.07853445, 0.6743654, 0.2182117, -0.13249213, -0.72828084, -0.18644981, -0.18644981, 0.72828084, -0.13249213, -0.13249213, -0.7014076, 0.19121172, 0.16421175, 0.7014076, 0.16421175, 0.2182117, 0.6743654, -0.07853445, 0.2182117, -0.6743654, 0.08329635, 0.08329635, -0.6743654, 0.2182117, 0.053939402, 0.8249352, 0.079698436, -0.07509517, -0.82662773, 0.054045185, 0.08329635, -0.7014076, -0.21344979, -0.13249213, 0.72828084, -0.18644981, -0.21344979, -0.7014076, 0.08329635, 0.08329635, 0.6743654, 0.2182117, 0.2182117, -0.6743654, -0.07853445, 0.2182117, 0.6743654, 0.08329635, 0.07980259, -0.8260464, -0.049206518, -0.18644981, -0.72828084, -0.13249213, -0.15944985, 0.72828084, 0.16421175, -0.07521047, 0.8278579, -0.049319647, 0.16421175, 0.72828084, -0.15944985, -0.07853445, -0.6743654, 0.2182117, 0.053939376, -0.8249348, 0.0796984, 0.07980314, 0.8260523, -0.049206886, -0.18644981, -0.7014076, 0.13725403, -0.049319647, -0.8278579, -0.07521047, 0.13725403, -0.7014076, -0.18644981, 0.19121172, 0.7014076, -0.13249213)
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_dufin")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -25,9 +25,11 @@ shape = SubResource("ConvexPolygonShape3D_cvunv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3114162, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(0.9997825, -0.020855172, 0, 0.020855172, 0.9997825, 0, 0, 0, 1, 0.1637243, 0.14986134, -0.15079784)
 
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
-transform = Transform3D(2, 0, 0, 0, -8.742278e-08, -2, 0, 2, -8.742278e-08, 0, 0, -0.024263829)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.0072731525, 0.011521578, -0.12091741)
+target_position = Vector3(0, 0, -2.5)
 collision_mask = 2
 hit_from_inside = true
 script = ExtResource("3_cthcg")
@@ -35,10 +37,11 @@ script = ExtResource("3_cthcg")
 [node name="Node3D" type="Node3D" parent="Head/Camera3D"]
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D/Node3D"]
-transform = Transform3D(1, 0, 0, 0, 0.9988062, 0.048849773, 0, -0.048849773, 0.9988062, 0, -0.157, -0.431)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.157, -0.431)
 light_color = Color(0.96117514, 0.93456006, 0.7355992, 1)
 light_energy = 5.0
 light_indirect_energy = 0.0
 spot_range = 15.0
 spot_angle_attenuation = 3.0
 script = ExtResource("3_nr340")
+picked_up = true

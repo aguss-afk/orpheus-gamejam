@@ -1,6 +1,6 @@
 extends SpotLight3D
 
-var picked_up : bool = false
+@export var picked_up : bool = false
 var picked_up_first_time : bool = true
 var ins_text
 var timer := 0.0

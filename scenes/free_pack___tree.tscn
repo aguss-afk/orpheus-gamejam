@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwybpvndymc27"]
+
+[ext_resource type="PackedScene" uid="uid://4vw8g4iqr15b" path="res://assets/modelos/Free Pack - Tree.fbx" id="1_1l65o"]
+
+[node name="Free Pack - Tree" instance=ExtResource("1_1l65o")]
+
+[node name="SM_FreeTree_03" parent="Free_Tree" index="0"]
+visible = false
+
+[node name="SM_FreeTree_05" parent="Free_Tree" index="1"]
+visible = false
+
+[node name="SM_FreeTree_06" parent="Free_Tree" index="4"]
+visible = false
+
+[node name="SM_FreeTree_04" parent="Free_Tree" index="5"]
+visible = false

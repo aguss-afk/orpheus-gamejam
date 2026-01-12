@@ -191,3 +191,4 @@ func make_room(rec:int):
 	var avg_z : float = start_pos.z + (float(height)/2)
 	var pos : Vector3 = Vector3(avg_x,0,avg_z)
 	room_positions.append(pos)
+	

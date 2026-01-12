@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0w0b5yt1ubf3"]
+
+[ext_resource type="PackedScene" uid="uid://wfd1n0k47dev" path="res://assets/modelos/fantasma_fixed.blend" id="1_0i1ls"]
+[ext_resource type="Script" uid="uid://cbxysg8nvuj8g" path="res://scripts/fantasma_final.gd" id="2_kco83"]
+
+[node name="fantasma_fixed" instance=ExtResource("1_0i1ls")]
+script = ExtResource("2_kco83")
