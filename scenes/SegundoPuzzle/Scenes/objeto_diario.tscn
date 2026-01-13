@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://crnqb0g6bkja4"]
+
+[ext_resource type="ArrayMesh" uid="uid://dyrjnhf1i24h4" path="res://scenes/SegundoPuzzle/Modelos/Reales/diario.res" id="1_khqb5"]
+[ext_resource type="Script" uid="uid://lcp6v3844xse" path="res://scenes/SegundoPuzzle/Scripts/objeto_enterrado.gd" id="2_marur"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_marur"]
+size = Vector3(0.4, 0.4, 0.4)
+
+[node name="ObjetoDiario" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_marur")
+
+[node name="Diario" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.06408451, -0.010130086, 0.062374335, 0.040236603, 0.07504095, -0.029152568, -0.048725676, 0.04864399, 0.057961803, 0, 0, 0)
+mesh = ExtResource("1_khqb5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_marur")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(1, 1, 0.40392157, 1)

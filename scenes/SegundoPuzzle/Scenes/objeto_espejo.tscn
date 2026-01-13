@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmx4saxyc30qg"]
+
+[ext_resource type="ArrayMesh" uid="uid://j5pmnb253gxj" path="res://scenes/SegundoPuzzle/Modelos/Reales/espejo.res" id="1_8y005"]
+[ext_resource type="Script" uid="uid://lcp6v3844xse" path="res://scenes/SegundoPuzzle/Scripts/objeto_enterrado.gd" id="1_sjol4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_marur"]
+size = Vector3(0.4, 0.4, 0.4)
+
+[node name="ObjetoEspejo" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_sjol4")
+tipo_objeto = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_marur")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(1, 1, 0.40392157, 1)
+
+[node name="Espejo" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.04742503, -0.0111036, -0.087336, 0.008166299, 0.099328615, -0.008193851, 0.08765944, -0.0032461819, 0.048013378, 0, -0.32, 0)
+mesh = ExtResource("1_8y005")

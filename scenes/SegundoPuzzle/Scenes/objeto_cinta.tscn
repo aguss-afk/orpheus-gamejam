@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bh2rd00yf62bh"]
+
+[ext_resource type="Script" uid="uid://lcp6v3844xse" path="res://scenes/SegundoPuzzle/Scripts/objeto_enterrado.gd" id="1_eeags"]
+[ext_resource type="ArrayMesh" uid="uid://d1aoh3griqtdo" path="res://scenes/SegundoPuzzle/Modelos/Reales/cinta.res" id="1_sxfod"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_marur"]
+size = Vector3(0.4, 0.4, 0.4)
+
+[node name="ObjetoCinta" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_eeags")
+tipo_objeto = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_marur")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(1, 1, 0.40392157, 1)
+
+[node name="Cinta" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.12378525, -0.2861317, -0.15907815, 0.21453804, 0.19936104, -0.19164711, 0.24728657, -0.029729225, 0.24589738, 0, 0, 0)
+mesh = ExtResource("1_sxfod")

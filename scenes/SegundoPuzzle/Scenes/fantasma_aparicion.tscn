@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://8kf7f8w8knc0"]
+
+[ext_resource type="Script" uid="uid://dw1c8xheg3p8y" path="res://scenes/SegundoPuzzle/Scripts/fantasma_aparicion.gd" id="1_dhiqp"]
+[ext_resource type="ArrayMesh" uid="uid://b0wg2hnib0ml3" path="res://scenes/SegundoPuzzle/Modelos/Reales/niña_fantasma_mesh.res" id="2_avfo8"]
+
+[node name="FantasmaAparicion" type="Node3D"]
+script = ExtResource("1_dhiqp")
+
+[node name="NiñaFantasmaMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.6, 0)
+mesh = ExtResource("2_avfo8")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(0, 0.7292936, 0.73083335, 1)
+light_energy = 3.0
+omni_range = 8.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
