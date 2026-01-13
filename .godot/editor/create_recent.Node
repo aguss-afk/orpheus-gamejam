@@ -1,8 +1,9 @@
-OmniLight3D
-CollisionShape3D
-StaticBody3D
 Node3D
 MeshInstance3D
+CollisionShape3D
+Node
+OmniLight3D
+StaticBody3D
 Timer
 AudioStreamPlayer3D
 TextureRect
@@ -11,5 +12,3 @@ HBoxContainer
 DirectionalLight3D
 WorldEnvironment
 Label
-VBoxContainer
-ColorRect

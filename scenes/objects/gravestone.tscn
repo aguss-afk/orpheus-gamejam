@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://511opy0cliit"]
+
+[ext_resource type="ArrayMesh" uid="uid://byy5b1jigs5lb" path="res://assets/modelos/gravestone.res" id="1_cf7aq"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1qjjr"]
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_1qjjr")
+
+[node name="Gravestone" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_cf7aq")

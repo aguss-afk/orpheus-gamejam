@@ -19,10 +19,13 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=320
 window/size/viewport_height=240
-window/size/mode=4
 window/size/borderless=true
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
+
+[filesystem]
+
+import/blender/enabled=false
 
 [global_group]
 

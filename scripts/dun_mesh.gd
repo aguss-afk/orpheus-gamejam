@@ -4,7 +4,6 @@ extends Node3D
 @export var grid_map_path : NodePath = NodePath("../GridMap")
 @onready var grid_map : GridMap = get_node(grid_map_path) if (grid_map_path != null and has_node(grid_map_path)) else null
 
-
 var dun_cell_scene : PackedScene = preload("res://scenes/dun_cell.tscn")
 const DIRS := [
 	{ "name": "front", "vec": Vector3i.FORWARD },
