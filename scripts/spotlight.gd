@@ -1,6 +1,6 @@
 extends SpotLight3D
 
-@export var picked_up : bool = false
+var picked_up : bool = false
 var picked_up_first_time : bool = true
 var ins_text
 var timer := 0.0
@@ -11,10 +11,12 @@ func start_timer() -> void:
 	timer = 0.0
 	timer_running = true
 	ins_text.visible = true
+	
 func on_timer_finished() -> void:
 	ins_text.visible = false
 	
 func _ready() -> void:
+	visible = false
 	ins_text = get_node("/root/" + get_tree().current_scene.name + "/UI/Flashlight")
 	ins_text.visible = false
 func _process(delta: float) -> void:

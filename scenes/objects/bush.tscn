@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpg5ij4eblmib"]
+
+[ext_resource type="ArrayMesh" uid="uid://brdqrmbal0nlk" path="res://assets/modelos/Sticks/bush.res" id="1_a4y6f"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ehqem"]
+radius = 0.693537
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65040135, 0)
+shape = SubResource("SphereShape3D_ehqem")
+
+[node name="Bush" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, -1, 0, 1.1924881e-08, -5.2125306e-16, 1, -1, 4.371139e-08, 1.1924881e-08, 0, 0, 0)
+mesh = ExtResource("1_a4y6f")

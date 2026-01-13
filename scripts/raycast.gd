@@ -46,7 +46,6 @@ func _process(delta: float) -> void:
 		var hit = get_collider()
 		if hit.has_method("interact"):
 			int_text.visible = true
-			
 			if Input.is_action_just_pressed("interact"):
 				hit.interact()
 		else:

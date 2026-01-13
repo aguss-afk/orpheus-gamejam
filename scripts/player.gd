@@ -20,7 +20,7 @@ var screamer_scene = preload("res://scenes/screamer.tscn")
 
 func _ready() -> void:
 	add_to_group("Player")
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	# Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 	if Engine.is_editor_hint():
 		return
@@ -78,9 +78,6 @@ func _headbob(time) -> Vector3:
 	pos.y = sin(time * BOB_FREQ) * BOB_AMP
 	return pos
 	
-	# --- VARIABLES NUEVAS (Pégalas arriba con las otras) ---
-
-# --- FUNCIÓN NUEVA (Pégala al final del script) ---
 func recibir_dano():
 	# 1. Restar vida
 	vida_actual -= 1
